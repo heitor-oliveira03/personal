@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 48px;
+}
+
+/* ── Header ── */
+header {
+  text-align: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #808080;
+}
+
+h1 {
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+#title {
+  margin-bottom: 4px;
+}
+
+/* ── Sections ── */
+section {
+  margin-top: 14px;
+}
+
+h2 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #808080;
+  padding-bottom: 2px;
+  margin-bottom: 4px;
+}
+
+/* ── Body text ── */
+p {
+  line-height: 1.5;
+  text-align: justify;
+  margin: 8px 0;
+}
+
+ul {
+  margin: 4px 0 0 20px;
+}
+
+ul li {
+  list-style-type: disc;
+  text-align: justify;
+}
+
+/* ── Entry rows (experience & education) ── */
+.entry {
+  margin-top: 8px;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.entry-period {
+  font-style: italic;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Links ── */
+a {
+  color: #000000;
+  text-decoration: none;
+}
