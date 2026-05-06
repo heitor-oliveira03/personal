@@ -20,7 +20,10 @@ function renderSkills(t) {
   el.innerHTML = "";
   t.skills.forEach((item) => {
     const li = document.createElement("li");
-    li.textContent = item;
+    const label = document.createElement("strong");
+    label.textContent = `${item.label}:`;
+    li.appendChild(label);
+    li.appendChild(document.createTextNode(` ${item.value}`));
     el.appendChild(li);
   });
 }
@@ -56,13 +59,25 @@ function renderExperience(t) {
 
     div.appendChild(makeEntryHeader(left, entry.period));
 
-    const ul = document.createElement("ul");
-    entry.bullets.forEach((bullet) => {
-      const li = document.createElement("li");
-      li.textContent = bullet;
-      ul.appendChild(li);
+    (entry.projects || []).forEach((project) => {
+      const projectDiv = document.createElement("div");
+      projectDiv.className = "project";
+
+      const projectName = document.createElement("h3");
+      projectName.className = "project-name";
+      projectName.textContent = project.name;
+      projectDiv.appendChild(projectName);
+
+      const ul = document.createElement("ul");
+      project.bullets.forEach((bullet) => {
+        const li = document.createElement("li");
+        li.textContent = bullet;
+        ul.appendChild(li);
+      });
+      projectDiv.appendChild(ul);
+
+      div.appendChild(projectDiv);
     });
-    div.appendChild(ul);
 
     el.appendChild(div);
   });
@@ -87,20 +102,30 @@ function renderEducation(t) {
   });
 }
 
+function renderLanguages(t) {
+  const el = document.getElementById("languages");
+  el.innerHTML = "";
+  (t.languages || []).forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    el.appendChild(li);
+  });
+}
+
 function render() {
   const t = i18n[LANG];
   document.getElementById("name").textContent = t.name;
   renderLinks(t);
   document.getElementById("about").textContent = t.about;
-  document.getElementById("about-text").textContent = t["about-text"];
-  document.getElementById("skills-heading").textContent = t["skills-heading"];
+  document.getElementById("about-text").textContent = t.aboutText;
+  document.getElementById("skills-header").textContent = t.skillsHeader;
   renderSkills(t);
-  document.getElementById("experience-heading").textContent =
-    t["experience-heading"];
+  document.getElementById("experience-header").textContent = t.experienceHeader;
   renderExperience(t);
-  document.getElementById("education-heading").textContent =
-    t["education-heading"];
+  document.getElementById("education-header").textContent = t.educationHeader;
   renderEducation(t);
+  document.getElementById("language-header").textContent = t.languageHeader;
+  renderLanguages(t);
   document.documentElement.lang = LANG === "pt" ? "pt-BR" : "en";
 }
 

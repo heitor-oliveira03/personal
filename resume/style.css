@@ -16,15 +16,14 @@ body {
 /* ── Header ── */
 header {
   text-align: center;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #808080;
+  margin-bottom: 12px;
 }
 
 h1 {
   font-size: 23px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 #title {
@@ -49,7 +48,10 @@ h2 {
 p {
   line-height: 1.5;
   text-align: justify;
-  margin: 8px 0;
+}
+
+#links {
+  text-align: center;
 }
 
 ul {
@@ -77,6 +79,16 @@ ul li {
   font-style: italic;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.project {
+  margin-top: 6px;
+}
+
+.project-name {
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
 }
 
 /* ── Links ── */
