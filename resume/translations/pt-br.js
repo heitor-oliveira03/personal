@@ -1,13 +1,12 @@
 const PT_BR = {
-  name: "Lucas Gomes Coco da Silva",
+  name: "Heitor Albuquerque de Oliveira",
   links: [
-    { label: "dev@lucascoco.com", url: "mailto:dev@lucascoco.com" },
+    { label: "albuquerquedeoliveiraheitor@gmail.com", url: "mailto:albuquerquedeoliveiraheitor@gmail.com" },
     {
-      label: "linkedin.com/in/coco-lucas",
-      url: "https://linkedin.com/in/coco-lucas",
+      label: "linkedin.com/in/heitoralbuoliveira/",
+      url: "https://www.linkedin.com/in/heitoralbuoliveira/",
     },
-    { label: "github.com/coco-lucas", url: "https://github.com/coco-lucas" },
-    { label: "lucascoco.com", url: "http://lucascoco.com" },
+    { label: "github.com/heitor-oliveira03", url: "https://github.com/heitor-oliveira03" },
   ],
   about: "Resumo Profissional",
   aboutText:
@@ -16,30 +15,26 @@ const PT_BR = {
   skills: [
     {
       label: "Linguagens",
-      value: "TypeScript, JavaScript, Java, Node.js, Python.",
+      value: "TypeScript, JavaScript, Node.js, Python.",
     },
     {
       label: "Frontend & UI",
       value:
-        "React, Angular, Next.js, Tailwind, Sass, Shadcn/ui, Zustand, React Query, TanStack Table, React Hook Form, Zod, Server Actions, Framer Motion, GSAP — com foco em acessibilidade, responsividade e Mobile First.",
+        "React, Next.js, Vite, Tailwind, Sass, Shadcn/ui, Zustand, React Query, TanStack Table, React Hook Form, Zod, Server Actions, Framer Motion, GSAP, Three.js — com foco em acessibilidade, responsividade e Mobile First.",
     },
     {
       label: "Backend & Infraestrutura",
       value:
-        "NestJS, Express.js, Spring Boot, Prisma, Drizzle, RabbitMQ, REST APIs, WebSockets.",
+        "Python, Django, Express.js, REST APIs, WebSockets",
     },
     {
       label: "Cloud & DevOps",
       value:
-        "AWS (Lambda, S3, RDS, CloudWatch, Amplify, CloudFront), Docker, CI/CD (GitHub Actions, Vercel), Vite, Git, GitHub, BitBucket, Azure.",
+        "AWS (S3, CloudFront), Docker, CI/CD (GitHub Actions, Vercel), Git, GitHub, BitBucket, Azure.",
     },
     {
       label: "Dados",
-      value: "SQL (PostgreSQL, MySQL, MariaDB), NoSQL (MongoDB)",
-    },
-    {
-      label: "Testes & Práticas",
-      value: "Jest, TDD, Agile/Scrum, Microsserviços.",
+      value: "SQL (PostgreSQL)",
     },
     {
       label: "IA & Desenvolvimento",
@@ -52,14 +47,14 @@ const PT_BR = {
     {
       role: "Desenvolvedor Fullstack",
       company: "NOCLAF",
-      period: "Ago. 2025 – Atual",
+      period: "Jun. 2025 – Atual",
       projects: [
         {
-          name: "Backoffice Financeiro SaaS B2B — SAQ",
+          name: "Licita Premium — Plataforma de Pregão Eletrônico",
           bullets: [
-            "Substituí o sistema legado construindo do zero um backoffice financeiro completo em menos de 3 meses, em dupla, suportando 10M+ transações PIX/dia, R$1B+ mensais e clientes em 3+ países, com Next.js, TypeScript, Zustand, React Query e server actions.",
-            "Integrei 50+ endpoints do ecossistema SAQ garantindo tipagem forte ponta a ponta, consistência de dados e comunicação eficiente entre serviços sensíveis.",
-            "Implementei controle de acesso granular por roles, paginação tokenizada customizada e dashboards com tabelas e gráficos, centralizando operações anteriormente dispersas no sistema legado.",
+            "Atuei como full-stack na construção de uma plataforma de pregão eletrônico regida pela Lei 14.133/2021, cobrindo back (Django REST + Channels, 55 models e 48 viewsets) e front (React + TypeScript, 110 rotas e ~50 serviços de API), com quatro perfis distintos — pregoeiro, fornecedor, cidadão (controle social) e admin — em produção.",
+            "Projetei a sala de disputa em tempo real com WebSocket (Django Channels + Redis): 25 tipos de evento em canais segregados por lote, leilão, staff e usuário, com anonimato dos fornecedores garantido no servidor via payload mascarado por perfil, recuperação de gap na reconexão e ticket de handshake de curta duração substituindo o JWT exposto na URL.",
+            "Implementei o rito recursal e os prazos legais da Lei 14.133 (intenção de recurso → recurso → contrarrazão → julgamento) com contagem em dias úteis e feriados nacionais, deadlines absolutos à prova de drift de relógio e jobs agendados (APScheduler) para transição automática de fase.",
           ],
         },
         {
@@ -83,16 +78,11 @@ const PT_BR = {
   educationHeader: "Educação",
   education: [
     {
-      degree: "Bacharelado em Ciência da Computação",
+      degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
       institution: "UNIFESO - Centro Educacional Serra dos Órgãos",
-      period: "Ago. 2024 – Ago. 2028",
-    },
-    {
-      degree: "Residência em TIC/Software como Desenvolvedor FullStack (770h)",
-      institution: "SERRATEC – Parque Tecnológico Região Serrana",
-      period: "Ago. – Dez. 2024",
+      period: "Ago. 2024 – Dez. 2026",
     },
   ],
   languageHeader: "Linguagens",
-  languages: ["Inglês: Avançado (C1 Level)", "Português: Nativo"],
+  languages: ["Inglês: Fluente", "Português: Nativo"],
 };
