@@ -10,7 +10,7 @@ body {
   line-height: 1.5;
   max-width: 720px;
   margin: 0 auto;
-  padding: 40px 48px;
+  padding: 36px 48px;
 }
 
 /* ── Header ── */
@@ -95,4 +95,9 @@ ul li {
 a {
   color: #000000;
   text-decoration: none;
+}
+
+/* ── Print: sem cabeçalho/rodapé do navegador (data, título, URL) ── */
+@page {
+  margin: 0;
 }

@@ -10,7 +10,7 @@ const PT_BR = {
   ],
   about: "Resumo Profissional",
   aboutText:
-    "Desenvolvedor FullStack com 1+ ano de experiência prática em projetos de alta complexidade, desenvolvendo aplicações web utilizando IA como parte do fluxo. Trabalho de forma independente, com forte atenção a detalhes, traduzindo regras de negócio em código limpo, escalável e manutenível, e também modernizando sistemas legados, elevando-os à nível de produção. Experiência comprovada no desenvolvimento de aplicações web críticas, integrações sensíveis, validações precisas e velocidade de entrega. Conhecimento de nível avançado em Typescript, React, Next.js, Node.js, NestJS, PostgreSQL, Docker, CI/CD e AWS, com foco em testes, validação e refinamento de soluções geradas com IA.",
+    "Desenvolvedor FullStack com 1+ ano de experiência prática em projetos de alta complexidade, usando IA como parte do fluxo. Trabalho de forma independente, traduzindo regras de negócio em código limpo e manutenível e modernizando sistemas legados até nível de produção, em aplicações web críticas, integrações sensíveis e validações precisas. Conhecimento avançado em TypeScript, React, Next.js, Node.js, PostgreSQL, CI/CD e AWS, com foco em testes e refinamento de soluções geradas com IA.",
   skillsHeader: "Habilidades técnicas",
   skills: [
     {
@@ -54,22 +54,23 @@ const PT_BR = {
           bullets: [
             "Atuei como full-stack na construção de uma plataforma de pregão eletrônico regida pela Lei 14.133/2021, cobrindo back (Django REST + Channels, 55 models e 48 viewsets) e front (React + TypeScript, 110 rotas e ~50 serviços de API), com quatro perfis distintos — pregoeiro, fornecedor, cidadão (controle social) e admin — em produção.",
             "Projetei a sala de disputa em tempo real com WebSocket (Django Channels + Redis): 25 tipos de evento em canais segregados por lote, leilão, staff e usuário, com anonimato dos fornecedores garantido no servidor via payload mascarado por perfil, recuperação de gap na reconexão e ticket de handshake de curta duração substituindo o JWT exposto na URL.",
-            "Implementei o rito recursal e os prazos legais da Lei 14.133 (intenção de recurso → recurso → contrarrazão → julgamento) com contagem em dias úteis e feriados nacionais, deadlines absolutos à prova de drift de relógio e jobs agendados (APScheduler) para transição automática de fase.",
+            "Implementei o rito recursal da Lei 14.133 (intenção → recurso → contrarrazão → julgamento) com contagem em dias úteis e feriados nacionais, deadlines à prova de drift de relógio e jobs (APScheduler) para transição automática de fase.",
           ],
         },
         {
-          name: "Plataforma de E-commerce 360° — GOATCOM",
+          name: "BMP (MoneyP) — Site institucional",
           bullets: [
-            "Atuei em todos os micro-frontends (Angular e Next.js) de uma plataforma completa de gestão de e-commerce similar ao Shopify, com 10+ lojas em produção e R$50K+ transacionados.",
-            "Contribuí no desenvolvimento de uma plataforma com 17+ integrações cobrindo publicidade, ERP, marketing, pagamentos, pixels, emissão de notas, fretes e notificações, entregando visibilidade 360° das operações para profissionais de marketing digital.",
+            "Atuei como full-stack na reconstrução do site e do CMS de uma fintech de banking-as-a-service, cobrindo back (Django REST, sobre MySQL) e front (Next.js 15 App Router + TypeScript), com deploy em ECS Fargate provisionado por Terraform.",
+            "Construí um importador de WordPress do 0 (XML WXR → News/Tag/Author/ImageVideo): parse com defusedxml contra XXE, download de mídia com guarda anti-SSRF (só IP público, sem seguir redirect, teto de tamanho), correção de mojibake e shortcodes do conteúdo legado, e reescrita das URLs de imagem para uma rota que assina a chave do S3 a cada request",
+            "Projetei o modelo de páginas do admin (Menu + Page): o CMS cria o item de navegação e a página, e a rota nasce no site sem deploy — slug com desempate por sufixo, allowlist de slugs reservados contra colisão com rota do Next e HTML sanitizado com nh3 na escrita."
           ],
         },
         {
-          name: "Sistema de Avaliação Socioeconômica - PUC-Rio",
+          name: "Passos Verdes — Site e Plataforma de Inscrições para Corridas de Rua",
           bullets: [
-            "Assumi sozinho projeto estagnado há 6 meses, entregando em produção em menos de 2 meses com Next.js e Express.js, atendendo todos os alunos inscritos e 25+ coordenadores e assistentes.",
-            "Modernizei um sistema majoritariamente manual, centralizando e automatizando toda a lógica de negócio e reduzindo significativamente o tempo do processo de avaliação.",
-            "Refatorei o sistema de validações com schema global em Zod compartilhado entre front e back, aplicando tipagem avançada e inferência de tipos para eliminar inconsistências entre camadas e facilitar manutenções futuras.",
+            "Construí sozinho, front e back, a plataforma de uma organizadora de corridas de rua: site institucional em Next.js 16 (App Router, React 19, TypeScript strict), e uma API REST em Express 5 + Postgres 17 (auth, eventos, banners, inscrições).",
+            "Blindei a fronteira da API contra erros silenciosos de data e de escrita: parser de date desligado no driver para 2026-04-12 não virar 2026-04-11T21:00Z no JSON, validação de ISO obrigatória contra leitura MM/DD, whitelist de colunas em todo INSERT/UPDATE contra mass assignment, e 6 códigos SQLSTATE traduzidos em respostas HTTP acionáveis sem vazar a linha do banco.",
+            "Cuidei do acabamento do front como parte do produto: design system em variáveis CSS do Tailwind v4 com tema escuro do admin por troca de tokens, prefers-reduced-motion em todas as animações, e planilha de participantes em CSV que abre direto no Excel pt-BR com a idade calculada na data da prova.",
           ],
         },
       ],

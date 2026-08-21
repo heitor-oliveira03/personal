@@ -1,4 +1,4 @@
-const LANG = "pt"; // change to 'en' to switch language
+const LANG = new URLSearchParams(location.search).get("lang") === "en" ? "en" : "pt"; // ?lang=en
 
 const i18n = { pt: PT_BR, en: EN };
 
